@@ -1,9 +1,9 @@
-package org.firstinspires.ftc.teamcode;
+package com.roboraiders.reference;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.Range;
-import com.roboraiders.Robot.Robot4Supers;
+import com.roboraiders.reference.Robot4Supers;
 
 /**
  * Created by Alex Snyder on 3/2/18.
@@ -11,9 +11,9 @@ import com.roboraiders.Robot.Robot4Supers;
 
 @TeleOp
 
-public class IndieTeleOpMecanum4Supers extends OpMode {
+public class IndieTeleOp extends OpMode {
 
-    public Robot4Supers robot = new Robot4Supers();
+    public IndieRobot robot = new IndieRobot();
 
     /* Define variables */
     float LeftBack;   // Power for left back motor

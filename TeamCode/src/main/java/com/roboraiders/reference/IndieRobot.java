@@ -1,4 +1,4 @@
-package com.roboraiders.Robot;
+package com.roboraiders.reference;
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cRangeSensor;
@@ -17,7 +17,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
  * Created by Alex Snyder on 3/1/18.
  */
 
-public class Robot4Supers {
+public class IndieRobot {
 
     /* Robot Motors, Servos, CR Servos and Sensors */
     public DcMotor motorFrontLeft = null;
@@ -56,7 +56,7 @@ public class Robot4Supers {
     /** Constructor for Robot class, current does nothing but is needed since every class needs a constructor
      *
      */
-    public Robot4Supers (){
+    public IndieRobot (){
 
     }
 

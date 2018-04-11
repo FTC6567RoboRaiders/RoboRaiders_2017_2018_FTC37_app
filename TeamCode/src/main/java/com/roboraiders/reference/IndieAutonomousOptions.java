@@ -1,14 +1,14 @@
-package org.firstinspires.ftc.teamcode;
+package com.roboraiders.reference;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import com.roboraiders.Robot.RoboRaidersAuto4Supers;
-import com.roboraiders.Robot.Robot4Supers;
+import com.roboraiders.reference.RoboRaidersAuto4Supers;
+import com.roboraiders.reference.Robot4Supers;
 
 @Autonomous
 
-public class IndieAutonomousOptions4Supers extends RoboRaidersAuto4Supers {
+public class IndieAutonomousOptions extends IndieRoboRaidersAuto {
 
-    public Robot4Supers robot = new Robot4Supers();
+    public IndieRobot robot = new IndieRobot();
 
     boolean cur_B_ButtonState;                                            // "b" button current state
     boolean cur_X_ButtonState;                                            // "x" button current state

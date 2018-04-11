@@ -1,4 +1,4 @@
-package com.roboraiders.Robot;
+package com.roboraiders.reference;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -16,7 +16,7 @@ import java.util.Locale;
  * Created by Alex Snyder on 3/1/18.
  */
 
-public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
+public abstract class IndieRoboRaidersAuto extends LinearOpMode {
 
     public VuforiaLocalizer vuforia;
     public VuforiaTrackable relicTemplate;
@@ -80,7 +80,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot           the bot currently being worked on
      * @param allianceColor the color of your alliance
      */
-    public void selectJewel(Robot4Supers bot, String allianceColor) throws InterruptedException {
+    public void selectJewel(IndieRobot bot, String allianceColor) throws InterruptedException {
 
         if (allianceColor.equals("red")) { //red alliance
 
@@ -161,7 +161,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param pictograph    the name of the pictograph as determined by getRelicRecoveryVuMark()
      * @throws InterruptedException
      */
-    public void selectColumn(Robot4Supers bot, String allianceColor, String alliancePlacement, String pictograph) throws InterruptedException {
+    public void selectColumn(IndieRobot bot, String allianceColor, String alliancePlacement, String pictograph) throws InterruptedException {
 
         /*
          Handle RED alliance
@@ -339,7 +339,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param power     the desired power the wheel motors will run at
      * @param direction the direction the robot is turning; either right or left
      */
-    public void imuTurn(Robot4Supers bot, float degrees, double power, String direction) { //gets hardware from
+    public void imuTurn(IndieRobot bot, float degrees, double power, String direction) { //gets hardware from
         //Robot and defines degrees as a
         //float, power as a double, and direction as a string
 
@@ -375,7 +375,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param power     the speed the robot will travel at
      * @param direction the direction the robot will travel: either forward, backward, right, or left
      */
-    public void encodersMove(Robot4Supers bot, double distance, double power, String direction) { //sets the parameters
+    public void encodersMove(IndieRobot bot, double distance, double power, String direction) { //sets the parameters
 
         bot.resetEncoders(); //resets encoders
         bot.runWithEncoders(); //sets the mode back to run with encoder
@@ -452,7 +452,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param rightPower - the right power that is to be applied to the right motors on the robot
      * @param direction - the direction to travel
      */
-    public void encodersMoveWithGyro(Robot4Supers bot, double distance, double leftPower, double rightPower, String direction) {
+    public void encodersMoveWithGyro(IndieRobot bot, double distance, double leftPower, double rightPower, String direction) {
 
         double powerMultiplier;              // Either -1 or 1 depending on the direction, -1 for backward and 1 for forward
         double robotCurrentHeading;          // The current heading of the robot
@@ -537,7 +537,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the robot currently being worked on
      * @throws InterruptedException
      */
-    public void lowerArm(Robot4Supers bot) throws InterruptedException {
+    public void lowerArm(IndieRobot bot) throws InterruptedException {
 
         double amountToMove;
 
@@ -576,7 +576,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the robot currently being worked on
      * @throws InterruptedException
      */
-    public void flickLeft(Robot4Supers bot) throws InterruptedException {
+    public void flickLeft(IndieRobot bot) throws InterruptedException {
 
         double servoElbowPosition = bot.getElbowServoPosition(); //sets getPosition() to servoPosition
 
@@ -595,7 +595,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the robot currently being worked on
      * @throws InterruptedException
      */
-    public void returnFromLeft(Robot4Supers bot) throws InterruptedException {
+    public void returnFromLeft(IndieRobot bot) throws InterruptedException {
 
         double servoElbowPosition = bot.getElbowServoPosition(); //sets getPosition() to servoPosition
 
@@ -614,7 +614,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the robot currently being worked on
      * @throws InterruptedException
      */
-    public void flickRight(Robot4Supers bot) throws InterruptedException {
+    public void flickRight(IndieRobot bot) throws InterruptedException {
 
         double servoElbowPosition = bot.getElbowServoPosition(); //sets getPosition() to servoPosition
 
@@ -633,7 +633,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the robot currently being worked on
      * @throws InterruptedException
      */
-    public void returnFromRight(Robot4Supers bot) throws InterruptedException {
+    public void returnFromRight(IndieRobot bot) throws InterruptedException {
 
         double servoElbowPosition = bot.getElbowServoPosition(); //sets getPosition() to servoPosition
 
@@ -652,7 +652,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot - the bot currently being worked on
      * @throws InterruptedException
      */
-    public void placeGlyph(Robot4Supers bot) throws InterruptedException {
+    public void placeGlyph(IndieRobot bot) throws InterruptedException {
 
         bot.glyphPivotCarry();
         Thread.sleep(250);
@@ -675,7 +675,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      *
      * @param bot the bot currently being worked on
      */
-    public void alignRobot(Robot4Supers bot, String allianceColor, String balancingStone) {
+    public void alignRobot(IndieRobot bot, String allianceColor, String balancingStone) {
 
         String sideHdrDistPrompt = "NADA";
         String sideDistPrompt = "NADA";
@@ -854,7 +854,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the bot currently being worked on
      * @throws InterruptedException
      */
-    public void justParkCloseBlue(Robot4Supers bot) throws InterruptedException {
+    public void justParkCloseBlue(IndieRobot bot) throws InterruptedException {
 
         encodersMove(bot, 32, 0.4, "forward");
         Thread.sleep(500);
@@ -872,7 +872,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the bot currently being worked on
      * @throws InterruptedException
      */
-    public void justParkFarBlue(Robot4Supers bot) throws InterruptedException {
+    public void justParkFarBlue(IndieRobot bot) throws InterruptedException {
 
         encodersMove(bot, 22, 0.4, "forward");
         Thread.sleep(500);
@@ -887,7 +887,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the bot currently being worked on
      * @throws InterruptedException
      */
-    public void justParkCloseRed(Robot4Supers bot) throws InterruptedException {
+    public void justParkCloseRed(IndieRobot bot) throws InterruptedException {
 
         encodersMove(bot, 32, 0.4, "backward");
         Thread.sleep(500);
@@ -905,7 +905,7 @@ public abstract class RoboRaidersAuto4Supers extends LinearOpMode {
      * @param bot the bot currently being worked on
      * @throws InterruptedException
      */
-    public void justParkFarRed(Robot4Supers bot) throws InterruptedException {
+    public void justParkFarRed(IndieRobot bot) throws InterruptedException {
 
         encodersMove(bot, 22, 0.4, "backward");
         Thread.sleep(500);
