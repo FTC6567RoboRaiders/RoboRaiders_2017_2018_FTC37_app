@@ -1,8 +1,8 @@
 package com.roboraiders.reference;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import com.roboraiders.reference.RoboRaidersAuto4Supers;
-import com.roboraiders.reference.Robot4Supers;
+import com.roboraiders.reference.IndieRoboRaidersAuto;
+import com.roboraiders.reference.IndieRobot;
 
 @Autonomous
 

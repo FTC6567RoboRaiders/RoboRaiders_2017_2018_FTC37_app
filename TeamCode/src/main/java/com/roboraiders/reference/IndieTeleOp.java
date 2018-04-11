@@ -3,7 +3,7 @@ package com.roboraiders.reference;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.Range;
-import com.roboraiders.reference.Robot4Supers;
+import com.roboraiders.reference.IndieRobot;
 
 /**
  * Created by Alex Snyder on 3/2/18.
